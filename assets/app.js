@@ -29,12 +29,28 @@ if (mediaQuery.matches) {
 
 // Default ONE
 let cityName = document.querySelector('.cityNAME').innerText.trim()
+const currentdate = new Date();
+const monthNames = ['01', '02', '03', '04', '05', '06',
+  '07', '08', '09', '10', '11', '12'
+];
+const dayNames = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+window.onload = function() {
+  let Date = currentdate.getDate()
+  let month = monthNames[currentdate.getMonth()];
+  let Year = currentdate.getFullYear() 
+  const dateClass = document.querySelector('.curentData')
+  let Day = dayNames[currentdate.getDay()];
+  dateClass.innerText = `${Day}      ${month}/${Date}/${Year}` 
+  console.log(Date,month,Year)
+}
+
+
+console.log(currentdate)
 
 function getWeatherData(latValue, lonValue) {
   fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${latValue}&lon=${lonValue}&appid=a15ea8dfd84147a3e97ccc213ae59b6d&units=metric`)
     .then(response => response.json())
     .then(data => {
-      console.log(data)
       const temp = document.querySelector('.fifteen');
       temp.innerText = Math.floor(data['main']['temp'])
         
