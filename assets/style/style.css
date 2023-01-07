@@ -50,14 +50,15 @@ body {
 }
 .Blur{
     position: absolute;
-    left: -0.38%;
-    right: 0.38%;
-    top: 0%;
-    bottom: 0%;
-
+    width: 100%;
+    height: 100%;
     background: rgba(0, 0, 0, 0.08);
     filter: blur(128px);
+    -webkit-backdrop-filter: blur(128px);
     overflow: hidden!important;
+    border-radius:40px;
+    
+
 }
 .elipsOne{
     position: absolute;
@@ -147,7 +148,7 @@ main{
     flex: none;
     order: 0;
     flex-grow: 0;
-    background-image: url(/Weather_App/assets/img/Rectangle\ 103.png);
+    background-image: url(/assets/img/Rectangle\ 103.png);
     background-size: cover;
     background-repeat: no-repeat;
 }
@@ -157,7 +158,7 @@ height: 575px;
 flex: none;
 order: 1;
 flex-grow: 0;
-background-image: url(/Weather_App/assets/img/Rectangle\ 103.png);
+background-image: url(/assets/img/Rectangle\ 103.png);
 background-size: cover;
 background-repeat: no-repeat;
 }
@@ -339,6 +340,7 @@ footer p  img{
     .upperLine p,.lowerLine p {
         font-size: 15px;
     }
+    
 }
 @media  (max-width:280px  ){
     footer p {
@@ -360,6 +362,7 @@ footer p  img{
         width: 315px;
         padding: 0 2px;
     }
+     
     
 }
 @media (max-width:820px) {
@@ -372,5 +375,6 @@ footer p  img{
         margin-top: 6px;
     }
     
+     
 }
  

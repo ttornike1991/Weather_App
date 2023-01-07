@@ -1,6 +1,7 @@
 // Dynamic Body sizing because of position:absoluted elements
 
 const div = document.querySelector('body');
+const blur = document.querySelector('.Blur');
 
 let maxWidth = 0;
 let maxHeight = 0;
